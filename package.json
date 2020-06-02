@@ -1,0 +1,20 @@
+{
+  "name": "lucky-duck-digital-agency",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "dev": "parcel src/index.html",
+    "prebuild": "rm -rf dist",
+    "build": "parcel build src/index.html"
+  },
+  "author": "Kyle Lambert",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4",
+    "sass": "^1.26.7"
+  },
+  "dependencies": {
+    "gsap": "^3.3.0"
+  }
+}
