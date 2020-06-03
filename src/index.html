@@ -3,159 +3,206 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lucky Duck</title>
+    <link rel="icon" href="./assets/studios-favicon.svg" />
+    <title>Studios.</title>
     <script src="/js/index.js" defer></script>
   </head>
   <body>
-    <!-- <header class="header">
-      <div class="container">
-        <div class="row">
-          <div class="header__logo">logo</div>
-          <nav class="navbar">
-            <ul class="navbar__menu">
-              <li class="navbar__item">
-                <a href="/" class="navbar__link">Work</a>
-              </li>
-              <li class="navbar__item">
-                <a href="/" class="navbar__link">Services</a>
-              </li>
-              <li class="navbar__item">
-                <a href="/" class="navbar__link">About</a>
-              </li>
-              <li class="navbar__item">
-                <a href="/" class="navbar__link">Contact</a>
-              </li>
-            </ul>
-            <div class="hamburger">
-              <div class="hamburger__inner" data-nav-ope></div>
+    <header class="header" data-header>
+      <div class="header-inner">
+        <a href="/" class="header-logo-link brand-logo"
+          >Studios<span>.</span></a
+        >
+        <nav class="header-nav">
+          <ul>
+            <li><a href="/" class="header-nav-link">Work</a></li>
+            <li><a href="/" class="header-nav-link">Services</a></li>
+            <li><a href="/" class="header-nav-link">About</a></li>
+            <li><a href="/" class="header-nav-link">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="hamburger-box">
+          <div class="hamburger">
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- intro animation -->
+    <div class="intro-overlay">
+      <div class="intro-panel-left" data-panel-left></div>
+      <div class="intro-panel-right" data-panel-right></div>
+      <span class="intro-line" data-intro-line></span>
+      <div class="intro-logo" data-intro-logo>Studios<span>.</span></div>
+    </div>
+
+    <main>
+      <section class="intro">
+        <div class="container">
+          <div class="wrapper">
+            <div class="intro-content">
+              <div class="intro-types">
+                <span>UX, DEV, WEBSITES, APPS</span>
+              </div>
+              <h1 class="intro-heading">
+                <span class="line-1">We bring ideas</span>
+                <span class="line-2">to life.</span>
+              </h1>
+              <p class="intro-sub">
+                <span class="line-1"
+                  >We're a team of designers, developers</span
+                >
+                <span class="line-2"
+                  >and brand strategists who create beautiful</span
+                >
+                <span class="line-3">websites, user-friendly apps, and</span>
+                <span class="line-4"
+                  >astounding digital experiences for our</span
+                >
+                <span class="line-5">clients and their customers.</span>
+              </p>
+              <div class="intro-cta">
+                <button class="intro-cta-button">
+                  Speak to us
+                </button>
+                <svg
+                  aria-hidden="true"
+                  focusable="false"
+                  data-prefix="fas"
+                  data-icon="chevron-right"
+                  role="img"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 320 512"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"
+                  ></path>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+        <img
+          src="./assets/intro.png"
+          alt="intro illustration"
+          class="intro-img"
+        />
+      </section>
+
+      <!-- navigation dropdown -->
+      <div class="main-navigation">
+        <div class="topbar" data-navigation-topbar>
+          <div class="topbar-logo brand-logo">Studios<span>.</span></div>
+          <div class="topbar-close">
+            <svg
+              aria-hidden="true"
+              focusable="false"
+              data-prefix="fas"
+              data-icon="times"
+              role="img"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 352 512"
+            >
+              <path
+                fill="currentColor"
+                d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"
+              ></path>
+            </svg>
+          </div>
+        </div>
+
+        <div class="container">
+          <nav class="nav">
+            <div class="feature-column">
+              <h2 class="column-heading" data-column-heading>Featured Work</h2>
+              <div class="feature-row" data-feature-row>
+                <a href="/" class="feature-link">
+                  <p class="feature-link-heading">WIRL</p>
+                  <p class="feature-link-sub">
+                    Designing and building a gifting platform for millenials.
+                  </p>
+                </a>
+              </div>
+              <div class="feature-row" data-feature-row>
+                <a href="/" class="feature-link">
+                  <p class="feature-link-heading">DigitalXRAID</p>
+                  <p class="feature-link-sub">
+                    Re-booting an award winning Cyber Security start-up.
+                  </p>
+                </a>
+              </div>
+              <div class="feature-row" data-feature-row>
+                <a href="/" class="feature-link">
+                  <p class="feature-link-heading">Jigtalk</p>
+                  <p class="feature-link-sub">
+                    Explaining the first gamified location based dating app in
+                    five seconds.
+                  </p>
+                </a>
+              </div>
+              <div class="feature-row" data-feature-row>
+                <a href="/" class="feature-link">
+                  <p class="feature-link-heading">Quack</p>
+                  <p class="feature-link-sub">
+                    Juicy branding for a food and drink social media agency.
+                  </p>
+                </a>
+              </div>
+            </div>
+
+            <div class="menu-column">
+              <h2 class="column-heading" data-column-heading>Menu</h2>
+              <div class="menu-row" data-menu-row>
+                <a href="/" class="menu-link">Work</a>
+              </div>
+              <div class="menu-row" data-menu-row>
+                <a href="/" class="menu-link">Services</a>
+              </div>
+              <div class="menu-row" data-menu-row>
+                <a href="/" class="menu-link">About</a>
+              </div>
+              <div class="menu-row" data-menu-row>
+                <a href="/" class="menu-link">Careers</a>
+              </div>
+              <div class="menu-row" data-menu-row>
+                <a href="/" class="menu-link">Press</a>
+              </div>
+              <div class="menu-row" data-menu-row>
+                <a href="/" class="menu-link">Newsletter</a>
+              </div>
+              <div class="menu-row" data-menu-row>
+                <a href="/" class="menu-link">Ideas</a>
+              </div>
+            </div>
+
+            <div class="location-column">
+              <h2 class="column-heading" data-column-heading>Location</h2>
+              <div class="location-row" data-location-row>
+                <div class="location-item">
+                  <p class="location-item-heading">Lucky Duck | Leeds</p>
+                  <p class="location-item-sub">
+                    Lucky Duck, The Leeming Building, Vicar Lane, LS2 7JF
+                  </p>
+                </div>
+              </div>
+              <div class="location-row" data-location-row>
+                <div class="location-item">
+                  <p class="location-item-heading">Lucky Duck | London</p>
+                  <p class="location-item-sub">
+                    Lucky Duck, Waterhouse Square, 1, London EC1N 2ST
+                  </p>
+                </div>
+              </div>
+              <div class="location-email" data-location-row>
+                <p class="location-email-text">hello@luckyduck.digital</p>
+              </div>
             </div>
           </nav>
         </div>
       </div>
-    </header> -->
-
-    <div class="main-navigation">
-      <div class="topbar">
-        <div class="topbar-logo">logo</div>
-        <div class="topbar-close">x</div>
-      </div>
-
-      <div class="container">
-        <nav class="nav">
-          <div class="feature-column">
-            <h2 class="column-heading">Featured Work</h2>
-            <div class="feature-row">
-              <a href="/" class="feature-link">
-                <p class="feature-link-heading">WIRL</p>
-                <p class="feature-link-sub">
-                  Designing and building a gifting platform for millenials.
-                </p>
-              </a>
-            </div>
-            <div class="feature-row">
-              <a href="/" class="feature-link">
-                <p class="feature-link-heading">DigitalXRAID</p>
-                <p class="feature-link-sub">
-                  Re-booting an award winning Cyber Security start-up.
-                </p>
-              </a>
-            </div>
-            <div class="feature-row">
-              <a href="/" class="feature-link">
-                <p class="feature-link-heading">Jigtalk</p>
-                <p class="feature-link-sub">
-                  Explaining the first gamified location based dating app in
-                  five seconds.
-                </p>
-              </a>
-            </div>
-            <div class="feature-row">
-              <a href="/" class="feature-link">
-                <p class="feature-link-heading">Quack</p>
-                <p class="feature-link-sub">
-                  Juicy branding for a food and drink social media agency.
-                </p>
-              </a>
-            </div>
-          </div>
-
-          <div class="menu-column">
-            <h2 class="column-heading">Menu</h2>
-            <div class="menu-row">
-              <a href="/" class="menu-link">Work</a>
-            </div>
-            <div class="menu-row">
-              <a href="/" class="menu-link">Services</a>
-            </div>
-            <div class="menu-row">
-              <a href="/" class="menu-link">About</a>
-            </div>
-            <div class="menu-row">
-              <a href="/" class="menu-link">Careers</a>
-            </div>
-            <div class="menu-row">
-              <a href="/" class="menu-link">Press</a>
-            </div>
-            <div class="menu-row">
-              <a href="/" class="menu-link">Newsletter</a>
-            </div>
-            <div class="menu-row">
-              <a href="/" class="menu-link">Ideas</a>
-            </div>
-          </div>
-
-          <div class="location-column">
-            <h2 class="column-heading">Location</h2>
-            <div class="location-row">
-              <div class="location-item">
-                <p class="location-item-heading">Lucky Duck | Leeds</p>
-                <p class="location-item-sub">
-                  Lucky Duck, The Leeming Building, Vicar Lane, LS2 7JF
-                </p>
-              </div>
-            </div>
-            <div class="location-row">
-              <div class="location-item">
-                <p class="location-item-heading">Lucky Duck | London</p>
-                <p class="location-item-sub">
-                  Lucky Duck, Waterhouse Square, 1, London EC1N 2ST
-                </p>
-              </div>
-            </div>
-            <div class="location-email">
-              <p class="location-email-text">hello@luckyduck.digital</p>
-            </div>
-          </div>
-        </nav>
-      </div>
-    </div>
-
-    <main>
-      <!-- <section class="intro">
-        <div class="container">
-          <div class="intro__wrapper">
-            <div class="intro__content">
-              this is my content this is my content this is my content this is
-              my content this is my content this is my content this is my
-              content this is my content
-            </div>
-            <div class="intro__illustration">
-              <img
-                src="../src/assets/intro.png"
-                alt="intro illustration"
-                class="intro__img intro__img--absolute"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="feature"></section> -->
     </main>
-
-    <div class="overlay">
-      <div class="overlay__left"></div>
-      <div class="overlay__right"></div>
-      <span class="overlay__line"></span>
-    </div>
   </body>
 </html>

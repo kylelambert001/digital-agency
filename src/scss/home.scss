@@ -1,158 +1,196 @@
 @use "./global.scss";
 
+.brand-logo {
+  font-size: 2.1rem;
+  font-weight: 700;
+
+  span {
+    font-weight: 800;
+    margin-left: 0.1rem;
+    color: global.$purple;
+  }
+}
+
+// header/topbar navigation
 .header {
-  height: 8rem;
   position: relative;
-  border-bottom: 1px solid rgb(104, 102, 119, 0.2);
-  background-color: global.$white;
+  height: 7rem;
   z-index: 5;
+  background-color: global.$white;
+
   @media (min-width: 1024px) {
-    border-bottom: none;
     background-color: transparent;
   }
-}
 
-.navbar {
-  display: flex;
-  align-items: center;
-
-  &__menu {
-    list-style: none;
-    display: none;
-    justify-content: center;
+  .header-inner {
+    height: 100%;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-    margin-right: 2.6rem;
 
     @media (min-width: 768px) {
-      display: flex;
+      padding: 0 3rem;
     }
-  }
 
-  &__item {
-    margin: 0 1.4rem;
-  }
-
-  &__link {
-    display: block;
-    font-size: 1rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    text-decoration: none;
-    letter-spacing: 1px;
-    color: global.$black;
-    cursor: pointer;
-    padding: 0.5rem;
-    transition: color 200ms ease;
-
-    &:hover {
-      color: global.$pink;
+    .header-logo-link {
+      display: block;
+      margin-right: 1rem;
+      cursor: pointer;
+      padding: 0.5rem 0;
+      text-decoration: none;
+      color: unset;
     }
-  }
-}
 
-.hamburger {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  &__inner {
-    position: relative;
-    cursor: pointer;
-    width: 2.8rem;
-    height: 2.8rem;
+    .header-nav {
+      ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 5.2rem;
 
-    &::before,
-    &::after {
-      content: "";
-      width: 100%;
-      background-color: global.$black;
-      height: 2px;
-      position: absolute;
-      transition: all 200ms ease;
-      border-radius: 2px;
-      @media (min-width: 768px) {
-        background-color: global.$black;
+        li {
+          margin-left: 0.8rem;
+
+          &:nth-child(1),
+          &:nth-child(2),
+          &:nth-child(3) {
+            display: none;
+          }
+
+          .header-nav-link {
+            display: block;
+            padding: 0.5rem;
+            text-decoration: none;
+            color: global.$black;
+            font-size: 1.1rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+
+            &:hover {
+              color: global.$dark-grey;
+            }
+
+            @media (min-width: 1024px) {
+              color: global.$white;
+            }
+          }
+
+          @media (min-width: 768px) {
+            margin-left: 2.4rem;
+            &:nth-child(1),
+            &:nth-child(2),
+            &:nth-child(3) {
+              display: block;
+            }
+          }
+        }
+
+        @media (min-width: 768px) {
+          margin-right: 8.2rem;
+        }
       }
     }
 
-    &::before {
-      top: 8px;
+    .hamburger-box {
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      height: 7rem;
+      width: 7rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+
+      &:hover {
+        .hamburger span {
+          background-color: global.$pink;
+        }
+      }
+
+      .hamburger {
+        position: relative;
+        width: 2rem;
+        height: 1rem;
+
+        span {
+          position: absolute;
+          width: 100%;
+          height: 2px;
+          background-color: global.$black;
+          border-radius: 2px;
+
+          &:first-child {
+            top: 0;
+          }
+          &:last-child {
+            bottom: 0;
+          }
+        }
+      }
+
+      @media (min-width: 768px) {
+        background-color: global.$white;
+      }
     }
-
-    &::after {
-      bottom: 8px;
-    }
-
-    &:hover::before,
-    &:hover::after {
-      background-color: global.$pink;
-    }
-
-    &[data-nav-open]::before {
-      top: 50%;
-      transform: translateY(-50%) rotate(45deg);
-    }
-
-    &[data-nav-open]::after {
-      bottom: 50%;
-      transform: translateY(50%) rotate(-45deg);
-    }
-  }
-}
-
-.overlay {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: 10;
-  display: flex;
-
-  &__left,
-  &__right {
-    background-color: global.$off-black;
-    height: 100%;
-    width: 50vw;
-  }
-
-  &__line {
-    background-color: global.$white;
-    width: 1px;
-    height: 100vh;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
   }
 }
 
 // main navigation overlay
-
 .main-navigation {
   position: fixed;
   top: 0;
   right: 0;
-  bottom: 0;
   left: 0;
+  bottom: 0;
   width: 100vw;
   height: 100vh;
   background-color: global.$off-black;
   color: global.$white;
+  z-index: 10;
+  transform: translateY(-100%);
 
   .topbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 6rem;
+    height: 7rem;
     padding: 0 2rem;
+
+    .topbar-close {
+      cursor: pointer;
+      padding: 1rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      svg {
+        width: 1.5rem;
+        path {
+          fill: global.$pink;
+        }
+      }
+    }
+
+    @media (min-width: 768px) {
+      padding: 0 3rem;
+    }
   }
 
   .nav {
     display: flex;
     justify-content: center;
     padding: 0 2rem;
-    margin-top: 10rem;
+
+    .feature-column,
+    .menu-column,
+    .location-column {
+      margin: 2.8rem 0;
+    }
 
     a {
       list-style: none;
@@ -276,7 +314,164 @@
   @media (min-width: 768px) {
     .nav {
       justify-content: space-between;
-      padding: 0 4rem;
+      padding: 0 3rem;
+    }
+  }
+}
+
+// intro section
+.intro {
+  min-height: 60vh;
+
+  .intro-content {
+    margin: 12% 0 8rem 0;
+
+    @media (min-width: 768px) {
+      margin: 14% 0 8rem 0;
+    }
+
+    .intro-types {
+      color: global.$pink;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: 700;
+      font-size: 1.2rem;
+      margin-bottom: 2.8rem;
+    }
+
+    .intro-heading {
+      color: global.$black;
+      font-size: 3.2rem;
+      margin-bottom: 1.8rem;
+
+      span {
+        display: block;
+        padding: 0.2rem 0;
+      }
+
+      .line-1 {
+      }
+
+      .line-2 {
+        color: global.$purple;
+      }
+
+      @media (min-width: 1024px) {
+        font-size: 3.8rem;
+      }
+    }
+
+    .intro-sub {
+      color: global.$off-purple;
+      font-size: 1.6rem;
+      margin-bottom: 3.8rem;
+
+      span {
+        display: block;
+        padding: 0.3rem 0;
+      }
+
+      @media (min-width: 1024px) {
+        font-size: 1.8rem;
+      }
+    }
+
+    .intro-cta {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+
+      .intro-cta-button {
+        outline: none;
+        border: none;
+        padding: 0.5rem 0;
+        cursor: pointer;
+        background-color: transparent;
+        font-size: 1.7rem;
+        color: global.$black;
+        font-weight: 600;
+      }
+
+      &:hover {
+        .intro-cta-button {
+          color: global.$dark-grey;
+        }
+
+        svg {
+          transform: translateX(1.6rem);
+        }
+      }
+
+      svg {
+        width: 1.5rem;
+        margin-left: 1.2rem;
+        transition: transform 200ms ease;
+        path {
+          fill: global.$pink;
+        }
+      }
+    }
+  }
+
+  .intro-img {
+    display: block;
+    max-width: 100%;
+    height: 40rem;
+    width: 100%;
+    object-fit: cover;
+
+    @media (min-width: 768px) {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 45%;
+      height: 100%;
+    }
+  }
+}
+
+// intro scene/overlay
+.intro-overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 20;
+  display: none;
+
+  .intro-panel-left,
+  .intro-panel-right {
+    background-color: global.$off-black;
+    height: 100%;
+    width: 50vw;
+  }
+
+  .intro-line {
+    background-color: global.$white;
+    width: 2px;
+    height: 100vh;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%) translateY(100%);
+    border-radius: 2px;
+  }
+
+  .intro-logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    font-size: 3.8rem;
+    font-weight: 700;
+    color: global.$white;
+    span {
+      font-weight: 800;
+      margin-left: 0.1rem;
+      color: global.$pink;
     }
   }
 }

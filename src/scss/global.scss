@@ -3,6 +3,8 @@ $off-black: #1c1c1c;
 $pink: #f4a5c1;
 $light-grey: #fafafa;
 $dark-grey: #56555f;
+$purple: #b1adc6;
+$off-purple: #686677;
 $white: #ffffff;
 
 // global resets
@@ -26,8 +28,16 @@ body {
 
 .container {
   margin: 0 auto;
-  max-width: 120rem;
-  height: 100%;
+  max-width: 118rem;
+
+  .wrapper {
+    padding: 0 2rem;
+    height: 100%;
+
+    @media (min-width: 768px) {
+      padding: 0 3rem;
+    }
+  }
 
   .row {
     display: flex;
