@@ -54,24 +54,41 @@ const overlayAnimation = () => {
 const introAnimation = () => {
   const introTL = gsap.timeline();
   introTL
-    .to("[data-intro-img]", {
+    .to("[data-hero-img]", {
       duration: 1.4,
       ease: "power4.out",
       x: 0,
-      opacity: 1,
+      autoAlpha: 1,
     })
     .to("[data-header-navbar]", {
       duration: 1,
       delay: -1,
       ease: "power4.out",
-      opacity: 1,
+      autoAlpha: 1,
       y: 0,
     })
-    .to("[data-intro-text-line]", {
+    .to("[data-subheading-line-text]", {
       duration: 0.5,
       delay: -1,
+      ease: "power4.out",
       y: 0,
       autoAlpha: 1,
-      stagger: { amount: 0.5 },
+      stagger: { amount: 0.4 },
+    })
+    .to("[data-color-box", {
+      duration: 1,
+      delay: -1,
+      xPercent: 101,
+      ease: "power4.out",
+      stagger: { amount: 0.4 },
+    })
+    .to("[data-color-box", {
+      duration: 0,
+      css: { display: "none" },
+    })
+    .to("[data-hero-cta]", {
+      duration: 0.5,
+      delay: -1,
+      autoAlpha: 1,
     });
 };

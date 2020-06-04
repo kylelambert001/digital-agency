@@ -17,7 +17,7 @@
   height: 7rem;
   z-index: 5;
   background-color: global.$white;
-  opacity: 0;
+  visibility: hidden;
   transform: translateY(-100%);
 
   @media (min-width: 1024px) {
@@ -50,7 +50,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-right: 5.2rem;
+        margin-right: 5.8rem;
 
         li {
           margin-left: 0.8rem;
@@ -73,10 +73,6 @@
 
             &:hover {
               color: global.$dark-grey;
-            }
-
-            @media (min-width: 1024px) {
-              color: global.$white;
             }
           }
 
@@ -155,6 +151,8 @@
   color: global.$white;
   z-index: 10;
   transform: translateY(-100%);
+
+  display: none;
 
   .topbar {
     display: flex;
@@ -321,118 +319,170 @@
   }
 }
 
-// intro section
-.intro {
-  min-height: 60vh;
-
-  .intro-content {
-    margin: 10rem 0 10rem 0;
+// hero scene
+.hero {
+  .hero-inner {
+    display: grid;
+    align-items: center;
 
     @media (min-width: 768px) {
-      margin: 15rem 0 15rem 0;
+      grid-template-columns: 1fr 40%;
     }
 
-    .intro-types {
-      color: global.$pink;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      font-weight: 700;
-      font-size: 1.2rem;
-      margin-bottom: 2.8rem;
+    @media (min-width: 1024px) {
+      grid-template-columns: 1fr 45%;
     }
 
-    .intro-heading {
-      color: global.$black;
-      font-size: 3.2rem;
-      margin-bottom: 1.8rem;
+    .hero-content {
+      padding: 2rem;
+      margin: 3.8rem 0;
 
-      span {
-        display: block;
-        padding: 0.2rem 0;
-      }
-
-      .line-1 {
-      }
-
-      .line-2 {
-        color: global.$purple;
+      @media (min-width: 768px) {
+        padding: 3rem;
       }
 
       @media (min-width: 1024px) {
-        font-size: 3.8rem;
+        padding: 0 3rem;
+        margin: 0 0 0 10%;
       }
-    }
 
-    .intro-sub {
-      color: global.$off-purple;
-      font-size: 1.6rem;
-      margin-bottom: 3.8rem;
+      .hero-types {
+        margin-bottom: 1.8rem;
 
-      span {
-        display: block;
-        padding: 0.4rem 0;
+        .types-line {
+          position: relative;
+          display: inline-block;
+          overflow: hidden;
+
+          .types-text {
+            color: global.$pink;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 700;
+            font-size: 1.2rem;
+          }
+
+          .types-color-box {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-color: global.$pink;
+          }
+        }
+      }
+
+      .hero-heading {
+        margin-bottom: 2.8rem;
+
+        .heading-line {
+          display: inline-block;
+          position: relative;
+          margin-bottom: 0.3rem;
+          overflow: hidden;
+
+          .heading-line-text {
+            font-size: 3.2rem;
+
+            @media (min-width: 768px) {
+              font-size: 3.8rem;
+            }
+
+            @media (min-width: 1024px) {
+              font-size: 4.2rem;
+            }
+          }
+
+          .heading-line-color-box {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-color: global.$black;
+          }
+
+          &:last-child {
+            .heading-line-text {
+              color: global.$purple;
+            }
+          }
+        }
+      }
+
+      .hero-subheading {
+        margin-bottom: 3.2rem;
+
+        .subheading-line-text {
+          display: inline-block;
+          color: global.$off-purple;
+          font-size: 1.6rem;
+          margin-bottom: 0.8rem;
+          transform: translateY(3px);
+          visibility: hidden;
+
+          @media (min-width: 768px) {
+            font-size: 1.8rem;
+          }
+        }
+      }
+
+      .hero-cta {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
         visibility: hidden;
-        transform: translateY(50px);
-      }
 
-      @media (min-width: 1024px) {
-        font-size: 1.8rem;
-      }
-    }
+        .hero-cta-button {
+          outline: none;
+          border: none;
+          padding: 0.5rem 0;
+          cursor: pointer;
+          background-color: transparent;
+          font-size: 1.8rem;
+          color: global.$black;
+          font-weight: 600;
+        }
 
-    .intro-cta {
-      display: inline-flex;
-      justify-content: center;
-      align-items: center;
+        &:hover {
+          .hero-cta-button {
+            color: global.$dark-grey;
+          }
 
-      .intro-cta-button {
-        outline: none;
-        border: none;
-        padding: 0.5rem 0;
-        cursor: pointer;
-        background-color: transparent;
-        font-size: 1.7rem;
-        color: global.$black;
-        font-weight: 600;
-      }
-
-      &:hover {
-        .intro-cta-button {
-          color: global.$dark-grey;
+          svg {
+            transform: translateX(1.6rem);
+          }
         }
 
         svg {
-          transform: translateX(1.6rem);
-        }
-      }
-
-      svg {
-        width: 1.5rem;
-        margin-left: 1.2rem;
-        transition: transform 200ms ease;
-        path {
-          fill: global.$pink;
+          width: 1.5rem;
+          margin-left: 1.2rem;
+          transition: transform 200ms ease;
+          path {
+            fill: global.$pink;
+          }
         }
       }
     }
-  }
 
-  .intro-img {
-    display: block;
-    max-width: 100%;
-    height: 40rem;
-    width: 100%;
-    object-fit: cover;
-    opacity: 0;
-    transform: translateX(100%);
-
-    @media (min-width: 768px) {
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      width: 45%;
+    .hero-img-box {
       height: 100%;
+      max-height: calc(100vh - 7rem);
+
+      .hero-img {
+        display: block;
+        max-width: 100%;
+        width: 100%;
+        object-fit: cover;
+        height: 400px;
+        visibility: hidden;
+        transform: translateX(100%);
+
+        @media (min-width: 768px) {
+          height: 100%;
+        }
+      }
     }
   }
 }
@@ -475,10 +525,17 @@
     font-size: 3.2rem;
     font-weight: 700;
     color: global.$white;
+
     span {
       font-weight: 800;
       margin-left: 0.1rem;
       color: global.$pink;
     }
   }
+}
+
+// feature-section
+.feature {
+  min-height: 100vh;
+  background-color: global.$light-grey;
 }
