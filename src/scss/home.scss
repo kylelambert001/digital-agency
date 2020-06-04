@@ -17,6 +17,8 @@
   height: 7rem;
   z-index: 5;
   background-color: global.$white;
+  opacity: 0;
+  transform: translateY(-100%);
 
   @media (min-width: 1024px) {
     background-color: transparent;
@@ -324,10 +326,10 @@
   min-height: 60vh;
 
   .intro-content {
-    margin: 12% 0 8rem 0;
+    margin: 10rem 0 10rem 0;
 
     @media (min-width: 768px) {
-      margin: 14% 0 8rem 0;
+      margin: 15rem 0 15rem 0;
     }
 
     .intro-types {
@@ -368,7 +370,9 @@
 
       span {
         display: block;
-        padding: 0.3rem 0;
+        padding: 0.4rem 0;
+        visibility: hidden;
+        transform: translateY(50px);
       }
 
       @media (min-width: 1024px) {
@@ -419,11 +423,14 @@
     height: 40rem;
     width: 100%;
     object-fit: cover;
+    opacity: 0;
+    transform: translateX(100%);
 
     @media (min-width: 768px) {
       position: absolute;
       top: 0;
       right: 0;
+      bottom: 0;
       width: 45%;
       height: 100%;
     }
@@ -431,7 +438,7 @@
 }
 
 // intro scene/overlay
-.intro-overlay {
+.overlay {
   position: fixed;
   top: 0;
   right: 0;
@@ -440,16 +447,16 @@
   width: 100vw;
   height: 100vh;
   z-index: 20;
-  display: none;
+  display: flex;
 
-  .intro-panel-left,
-  .intro-panel-right {
+  .overlay-left,
+  .overlay-right {
     background-color: global.$off-black;
     height: 100%;
     width: 50vw;
   }
 
-  .intro-line {
+  .overlay-line {
     background-color: global.$white;
     width: 2px;
     height: 100vh;
@@ -459,13 +466,13 @@
     border-radius: 2px;
   }
 
-  .intro-logo {
+  .overlay-logo {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 
-    font-size: 3.8rem;
+    font-size: 3.2rem;
     font-weight: 700;
     color: global.$white;
     span {
