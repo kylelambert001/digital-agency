@@ -10,9 +10,7 @@
   <body>
     <header class="header" data-header-navbar>
       <div class="header-inner">
-        <a href="/" class="header-logo-link brand-logo"
-          >Studios<span>.</span></a
-        >
+        <a href="/" class="header-logo-link brand-logo">Studios<span>.</span></a>
         <nav class="header-nav">
           <ul>
             <li><a href="/" class="header-nav-link">Work</a></li>
@@ -21,12 +19,23 @@
             <li><a href="/" class="header-nav-link">Contact</a></li>
           </ul>
         </nav>
-        <div class="hamburger-box">
-          <div class="hamburger">
-            <span></span>
-            <span></span>
-          </div>
-        </div>
+        <button class="hamburger-button" data-js-hamburger>
+          <svg
+            aria-hidden="true"
+            focusable="false"
+            data-prefix="fas"
+            data-icon="bars"
+            class="svg-inline--fa fa-bars fa-w-14"
+            role="img"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 448 512"
+          >
+            <path
+              fill="currentColor"
+              d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"
+            ></path>
+          </svg>
+        </button>
       </div>
     </header>
 
@@ -38,7 +47,119 @@
       <div class="overlay-logo" data-overlay-logo>Studios<span>.</span></div>
     </div>
 
+    <!-- main navigation dropdown -->
+    <div class="main-navigation" data-main-navigation>
+      <div class="topbar" data-navigation-topbar>
+        <div class="topbar-logo brand-logo">Studios<span>.</span></div>
+        <button class="topbar-close-button" data-js-hamburger-close>
+          <svg
+            aria-hidden="true"
+            focusable="false"
+            data-prefix="fas"
+            data-icon="times"
+            role="img"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 352 512"
+          >
+            <path
+              fill="currentColor"
+              d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"
+            ></path>
+          </svg>
+        </button>
+      </div>
+
+      <div class="container">
+        <nav class="nav">
+          <div class="feature-column">
+            <h2 class="column-heading" data-column-heading>Featured Work</h2>
+            <div class="feature-row" data-feature-row>
+              <a href="/" class="feature-link">
+                <p class="feature-link-heading">WIRL</p>
+                <p class="feature-link-sub">
+                  Designing and building a gifting platform for millenials.
+                </p>
+              </a>
+            </div>
+            <div class="feature-row" data-feature-row>
+              <a href="/" class="feature-link">
+                <p class="feature-link-heading">DigitalXRAID</p>
+                <p class="feature-link-sub">
+                  Re-booting an award winning Cyber Security start-up.
+                </p>
+              </a>
+            </div>
+            <div class="feature-row" data-feature-row>
+              <a href="/" class="feature-link">
+                <p class="feature-link-heading">Jigtalk</p>
+                <p class="feature-link-sub">
+                  Explaining the first gamified location based dating app in five seconds.
+                </p>
+              </a>
+            </div>
+            <div class="feature-row" data-feature-row>
+              <a href="/" class="feature-link">
+                <p class="feature-link-heading">Quack</p>
+                <p class="feature-link-sub">
+                  Juicy branding for a food and drink social media agency.
+                </p>
+              </a>
+            </div>
+          </div>
+
+          <div class="menu-column">
+            <h2 class="column-heading" data-column-heading>Menu</h2>
+            <div class="menu-row" data-menu-row>
+              <a href="/" class="menu-link">Work</a>
+            </div>
+            <div class="menu-row" data-menu-row>
+              <a href="/" class="menu-link">Services</a>
+            </div>
+            <div class="menu-row" data-menu-row>
+              <a href="/" class="menu-link">About</a>
+            </div>
+            <div class="menu-row" data-menu-row>
+              <a href="/" class="menu-link">Careers</a>
+            </div>
+            <div class="menu-row" data-menu-row>
+              <a href="/" class="menu-link">Press</a>
+            </div>
+            <div class="menu-row" data-menu-row>
+              <a href="/" class="menu-link">Newsletter</a>
+            </div>
+            <div class="menu-row" data-menu-row>
+              <a href="/" class="menu-link">Ideas</a>
+            </div>
+          </div>
+
+          <div class="location-column">
+            <h2 class="column-heading" data-column-heading>Location</h2>
+            <div class="location-row" data-location-row>
+              <div class="location-item">
+                <p class="location-item-heading">Lucky Duck | Leeds</p>
+                <p class="location-item-sub">
+                  Lucky Duck, The Leeming Building, Vicar Lane, LS2 7JF
+                </p>
+              </div>
+            </div>
+            <div class="location-row" data-location-row>
+              <div class="location-item">
+                <p class="location-item-heading">Lucky Duck | London</p>
+                <p class="location-item-sub">
+                  Lucky Duck, Waterhouse Square, 1, London EC1N 2ST
+                </p>
+              </div>
+            </div>
+            <div class="location-email" data-location-row>
+              <p class="location-email-text">hello@luckyduck.digital</p>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+
     <main>
+      <!-- hero section -->
       <section class="hero">
         <div class="hero-inner">
           <div class="hero-content">
@@ -61,31 +182,21 @@
               </span>
             </h1>
             <div class="hero-subheading">
-              <span class="subheading-line-text" data-subheading-line-text
-                >We're a team of designers, developers</span
-              >
+              <span class="subheading-line-text" data-subheading-line-text>We're a team of designers, developers</span>
               <br />
-              <span class="subheading-line-text" data-subheading-line-text
-                >and brand strategists who create beautiful</span
-              >
+              <span class="subheading-line-text" data-subheading-line-text>and brand strategists who create beautiful</span>
               <br />
-              <span class="subheading-line-text" data-subheading-line-text
-                >websites, user-friendly apps, and</span
-              >
+              <span class="subheading-line-text" data-subheading-line-text>websites, user-friendly apps, and</span>
               <br />
-              <span class="subheading-line-text" data-subheading-line-text
-                >astounding digital experiences for our</span
-              >
+              <span class="subheading-line-text" data-subheading-line-text>astounding digital experiences for our</span>
               <br />
-              <span class="subheading-line-text" data-subheading-line-text
-                >clients and their customers.</span
-              >
+              <span class="subheading-line-text" data-subheading-line-text>clients and their customers.</span>
               <br />
             </div>
-            <div class="hero-cta" data-hero-cta>
-              <button class="hero-cta-button">
+            <button class="btn btn-primary" data-hero-cta>
+              <div class="btn-primary-text">
                 Speak to us
-              </button>
+              </div>
               <svg
                 aria-hidden="true"
                 focusable="false"
@@ -100,132 +211,245 @@
                   d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"
                 ></path>
               </svg>
-            </div>
+            </button>
           </div>
           <div class="hero-img-box">
-            <img
-              src="./assets/intro.png"
-              alt="intro illustration"
-              class="hero-img"
-              data-hero-img
-            />
+            <img src="./assets/intro.png" alt="intro illustration" class="hero-img" data-hero-img />
           </div>
         </div>
       </section>
 
-      <!-- navigation dropdown -->
-      <div class="main-navigation">
-        <div class="topbar" data-navigation-topbar>
-          <div class="topbar-logo brand-logo">Studios<span>.</span></div>
-          <div class="topbar-close">
-            <svg
-              aria-hidden="true"
-              focusable="false"
-              data-prefix="fas"
-              data-icon="times"
-              role="img"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 352 512"
-            >
-              <path
-                fill="currentColor"
-                d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"
-              ></path>
-            </svg>
+      <section class="process">
+        <div class="process-container">
+          <div class="process-inner">
+            <div class="process-left">
+              <h1 class="process-left-head">
+                What are our capabilities?
+              </h1>
+              <div class="process-left-sub">
+                <span class="process-left-textline" data-gsap="process-left-textline"
+                  >Our team of experts will support your business from</span
+                >
+                <br />
+                <span class="process-left-textline" data-gsap="process-left-textline"
+                  >initial idea, all the way to market. We use a five step</span
+                >
+                <br />
+                <span class="process-left-textline" data-gsap="process-left-textline"
+                  >process that allows us to deliver quick, powerful, and</span
+                >
+                <br />
+                <span class="process-left-textline" data-gsap="process-left-textline">consistent results.</span>
+                <br />
+              </div>
+
+              <button class="btn-primary" data-gsap="process-btn">
+                <div>
+                  Speak to us
+                </div>
+                <svg
+                  aria-hidden="true"
+                  focusable="false"
+                  data-prefix="fas"
+                  data-icon="chevron-right"
+                  role="img"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 320 512"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"
+                  ></path>
+                </svg>
+              </button>
+            </div>
+            <div class="process-right">
+              <div class="process-right-feature" data-gsap="process-right-feature">
+                <h6 class="process-right-feature-head">Design</h6>
+                <a href="/" class="process-right-feature-link">Design Sprints</a>
+                <a href="/" class="process-right-feature-link">UX Design</a>
+                <a href="/" class="process-right-feature-link">Branding & Motion</a>
+              </div>
+              <div class="process-right-feature" data-gsap="process-right-feature">
+                <h6 class="process-right-feature-head">Grow</h6>
+                <a href="/" class="process-right-feature-link">Growth Hacking</a>
+              </div>
+              <div class="process-right-feature" data-gsap="process-right-feature">
+                <h6 class="process-right-feature-head">Development</h6>
+                <a href="/" class="process-right-feature-link">Web Development</a>
+                <a href="/" class="process-right-feature-link">Mobile Development</a>
+              </div>
+            </div>
           </div>
         </div>
+      </section>
 
-        <div class="container">
-          <nav class="nav">
-            <div class="feature-column">
-              <h2 class="column-heading" data-column-heading>Featured Work</h2>
-              <div class="feature-row" data-feature-row>
-                <a href="/" class="feature-link">
-                  <p class="feature-link-heading">WIRL</p>
-                  <p class="feature-link-sub">
-                    Designing and building a gifting platform for millenials.
-                  </p>
-                </a>
-              </div>
-              <div class="feature-row" data-feature-row>
-                <a href="/" class="feature-link">
-                  <p class="feature-link-heading">DigitalXRAID</p>
-                  <p class="feature-link-sub">
-                    Re-booting an award winning Cyber Security start-up.
-                  </p>
-                </a>
-              </div>
-              <div class="feature-row" data-feature-row>
-                <a href="/" class="feature-link">
-                  <p class="feature-link-heading">Jigtalk</p>
-                  <p class="feature-link-sub">
-                    Explaining the first gamified location based dating app in
-                    five seconds.
-                  </p>
-                </a>
-              </div>
-              <div class="feature-row" data-feature-row>
-                <a href="/" class="feature-link">
-                  <p class="feature-link-heading">Quack</p>
-                  <p class="feature-link-sub">
-                    Juicy branding for a food and drink social media agency.
-                  </p>
-                </a>
-              </div>
+      <section class="work">
+        <div class="work-container">
+          <div class="work-topbar">
+            <h1 class="work-head" data-gsap="work-head">Some of our favourite projects.</h1>
+            <button class="work-btn">See all work</button>
+          </div>
+          <div class="work-projects">
+            <div class="work-project work-project-one" data-gsap="work-project">
+              <img src="" alt="wirl project" class="work-project-img" />
+              <h6 class="work-project-head">WIRL</h6>
             </div>
+            <div class="work-project work-project-one" data-gsap="work-project">
+              <img src="" alt="digitalXRAID project" class="work-project-img" />
+              <h6 class="work-project-head">DigitalXRAID</h6>
+            </div>
+            <div class="work-project work-project-one" data-gsap="work-project">
+              <img src="" alt="wetennis project" class="work-project-img" />
+              <h6 class="work-project-head">WeTennis</h6>
+            </div>
+            <div class="work-project work-project-one" data-gsap="work-project">
+              <img src="" alt="jigtalk project" class="work-project-img" />
+              <h6 class="work-project-head">Jigtalk</h6>
+            </div>
+          </div>
+        </div>
+      </section>
 
-            <div class="menu-column">
-              <h2 class="column-heading" data-column-heading>Menu</h2>
-              <div class="menu-row" data-menu-row>
-                <a href="/" class="menu-link">Work</a>
-              </div>
-              <div class="menu-row" data-menu-row>
-                <a href="/" class="menu-link">Services</a>
-              </div>
-              <div class="menu-row" data-menu-row>
-                <a href="/" class="menu-link">About</a>
-              </div>
-              <div class="menu-row" data-menu-row>
-                <a href="/" class="menu-link">Careers</a>
-              </div>
-              <div class="menu-row" data-menu-row>
-                <a href="/" class="menu-link">Press</a>
-              </div>
-              <div class="menu-row" data-menu-row>
-                <a href="/" class="menu-link">Newsletter</a>
-              </div>
-              <div class="menu-row" data-menu-row>
-                <a href="/" class="menu-link">Ideas</a>
-              </div>
-            </div>
+      <section class="culture">
+        <div class="culture-container">
+          <h1 class="culture-head" data-gsap="culture-head">What is our culture.</h1>
+          <div class="culture-grid">
+            <img src="" alt="" class="culture-grid-img" data-gsap="culture-grid-img" />
+            <img src="" alt="" class="culture-grid-img" data-gsap="culture-grid-img" />
+            <img src="" alt="" class="culture-grid-img" data-gsap="culture-grid-img" />
+            <img src="" alt="" class="culture-grid-img" data-gsap="culture-grid-img" />
+          </div>
+          <div class="culture-btns">
+            <button class="btn-primary" data-gsap="culture-btn">
+              <span>
+                About
+              </span>
+              <svg
+                aria-hidden="true"
+                focusable="false"
+                data-prefix="fas"
+                data-icon="chevron-right"
+                role="img"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 320 512"
+              >
+                <path
+                  fill="currentColor"
+                  d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"
+                ></path>
+              </svg>
+            </button>
 
-            <div class="location-column">
-              <h2 class="column-heading" data-column-heading>Location</h2>
-              <div class="location-row" data-location-row>
-                <div class="location-item">
-                  <p class="location-item-heading">Lucky Duck | Leeds</p>
-                  <p class="location-item-sub">
-                    Lucky Duck, The Leeming Building, Vicar Lane, LS2 7JF
-                  </p>
-                </div>
-              </div>
-              <div class="location-row" data-location-row>
-                <div class="location-item">
-                  <p class="location-item-heading">Lucky Duck | London</p>
-                  <p class="location-item-sub">
-                    Lucky Duck, Waterhouse Square, 1, London EC1N 2ST
-                  </p>
-                </div>
-              </div>
-              <div class="location-email" data-location-row>
-                <p class="location-email-text">hello@luckyduck.digital</p>
-              </div>
-            </div>
+            <button class="btn-primary" data-gsap="culture-btn">
+              <span>
+                Careers
+              </span>
+              <svg
+                aria-hidden="true"
+                focusable="false"
+                data-prefix="fas"
+                data-icon="chevron-right"
+                role="img"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 320 512"
+              >
+                <path
+                  fill="currentColor"
+                  d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"
+                ></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-inner">
+          <div class="footer-cta">
+            <h1 class="footer-cta-head" data-gsap="footer-cta-head">We bring ideas to life.</h1>
+            <button class="btn-primary" data-gsap="footer-cta-btn">
+              <span>
+                Speak to us
+              </span>
+              <svg
+                aria-hidden="true"
+                focusable="false"
+                data-prefix="fas"
+                data-icon="chevron-right"
+                role="img"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 320 512"
+              >
+                <path
+                  fill="currentColor"
+                  d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"
+                ></path>
+              </svg>
+            </button>
+          </div>
+          <nav class="footer-nav">
+            <ul class="footer-nav-list" data-gsap="footer-nav-list">
+              <li class="footer-nav-item-head">About</li>
+              <li class="footer-nav-item">
+                <a href="/" class="footer-nav-link">Work</a>
+              </li>
+              <li class="footer-nav-item">
+                <a href="/" class="footer-nav-link">Services</a>
+              </li>
+              <li class="footer-nav-item">
+                <a href="/" class="footer-nav-link">Careers</a>
+              </li>
+              <li class="footer-nav-item">
+                <a href="/" class="footer-nav-link">Ideas</a>
+              </li>
+              <li class="footer-nav-item">
+                <a href="/" class="footer-nav-link">Contact</a>
+              </li>
+            </ul>
+
+            <ul class="footer-nav-list" data-gsap="footer-nav-list">
+              <li class="footer-nav-item-head">Services</li>
+              <li class="footer-nav-item">
+                <a href="/" class="footer-nav-link">Design Sprints</a>
+              </li>
+              <li class="footer-nav-item">
+                <a href="/" class="footer-nav-link">UX Design</a>
+              </li>
+              <li class="footer-nav-item">
+                <a href="/" class="footer-nav-link">Brand & Motion</a>
+              </li>
+              <li class="footer-nav-item">
+                <a href="/" class="footer-nav-link">Web Development</a>
+              </li>
+              <li class="footer-nav-item">
+                <a href="/" class="footer-nav-link">Growth Hacking</a>
+              </li>
+            </ul>
+
+            <ul class="footer-nav-list" data-gsap="footer-nav-list">
+              <li class="footer-nav-item-head">Misc</li>
+              <li class="footer-nav-item">
+                <a href="/" class="footer-nav-link">Press</a>
+              </li>
+              <li class="footer-nav-item">
+                <a href="/" class="footer-nav-link">Newsletter</a>
+              </li>
+              <li class="footer-nav-item">
+                <a href="/" class="footer-nav-link">Privacy and TOS</a>
+              </li>
+            </ul>
           </nav>
         </div>
-      </div>
 
-      <section class="feature"></section>
-    </main>
+        <div class="footer-external">
+          <a href="/" class="footer-external-link">Instagram</a>
+          <a href="/" class="footer-external-link">Dribble</a>
+          <a href="/" class="footer-external-link">Behance</a>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
